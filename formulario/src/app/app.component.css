@@ -1,0 +1,30 @@
+.toolbar {
+  padding-left: 40%;
+  position: absolute;
+  display: flex;
+  font-family: sans-serif, Arial, Helvetica;
+  color: black;
+}
+
+.formulario1 {
+  padding-left: 28%;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.select1 {
+  min-width: 150px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

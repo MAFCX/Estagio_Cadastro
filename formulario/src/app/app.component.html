@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <mat-toolbar>
+    <div class="toolbar">
+      <strong id="hh1">Tela de Cadastro</strong>
+    </div>
+  </mat-toolbar>
+  <mat-horizontal-stepper>
+    <mat-step label="Informações Pessoais">
+      <mat-tab-group>
+        <mat-tab label="Pessoa Física">
+          <form class="formulario1">
+            <br>
+            <br>
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nome completo">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput [textMask]="{mask: mask1}" type="text" placeholder="CPF">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="email" placeholder="E-mail">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="password" placeholder="Senha">
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="password" placeholder="Confirmar Senha">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="text" placeholder="Nacionalidade">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="number" placeholder="RG">
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Orgão Expedidor">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="select1">
+                    <mat-select placeholder="Curso">
+                      <mat-option *ngFor="let curso of cursos" [value]="curso.value">
+                        {{ curso.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput maxlength="12" type="number" placeholder="RGA">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="date" placeholder="Data de ingresso">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </mat-tab>
+        <mat-tab label="Pessoa Jurídica">
+          <form class="formulario1">
+            <br>
+            <br>
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Razão Social">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput [textMask]="{mask: mask2}" type="text" placeholder="CNPJ">
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="email" placeholder="E-mail">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="password" placeholder="Senha">
+                  </mat-form-field>
+                </td>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="password" placeholder="Confirmar Senha">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="date" placeholder="Data de abertura">
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </mat-tab>
+      </mat-tab-group>
+      <div class="button-row">
+        <button mat-raised-button color="primary" mat-button matStepperPrevious>Voltar</button>
+        <button mat-raised-button color="primary" mat-button matStepperNext>Avançar</button>
+      </div>
+    </mat-step>
+    <mat-step label="Endereço">
+      <form class="formulario1">
+        <br>
+        <br>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Logradouro">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput type="number" placeholder="Número">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Bairro/Distrito">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Complemento">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="select1">
+                <mat-select placeholder="Município">
+                  <mat-option *ngFor="let municipio of municipios" [value]="municipio.value">
+                    {{ municipio.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="select1">
+                <mat-select placeholder="UF">
+                  <mat-option *ngFor="let uf of ufs" [value]="uf.value">
+                    {{ uf.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput [textMask]="{mask: mask3}" type="text" placeholder="CEP">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput type="number" placeholder="Código IBGE do Município">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <div class="button-row">
+        <button mat-raised-button color="primary" mat-button matStepperPrevious>Voltar</button>
+        <button mat-raised-button color="primary" mat-button matStepperNext>Avançar</button>
+      </div>
+    </mat-step>
+    <mat-step label="Telefone">
+      <form class="formulario1">
+        <br>
+        <br>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input matInput [textMask]="{mask: mask4}" type="text" placeholder="Telefone">
+                </mat-form-field>
+              </form>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput type="number" placeholder="Ramal">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Uso">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="select1">
+                <mat-select placeholder="Operadora">
+                  <mat-option *ngFor="let operadora of operadoras" [value]="operadora.value">
+                    {{ operadora.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Contato">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Mensageiro">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="select1">
+                <mat-select placeholder="Prioridade">
+                  <mat-option *ngFor="let prioridade of prioridades" [value]="prioridade.value">
+                    {{ prioridade.viewValue }}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <div class="button-row">
+        <button mat-raised-button color="primary" mat-button matStepperPrevious>Voltar</button>
+        <button mat-raised-button color="primary" mat-button matStepperNext>Avançar</button>
+      </div>
+    </mat-step>
+    <mat-step label="Estágio">
+      <form class="formulario1">
+        <br>
+        <br>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Modalidade">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput type="date" placeholder="Data de Início">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput type="date" placeholder="Data de Termino">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput type="text" placeholder="Modalidade Orientação">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput [textMask]="{mask: mask5}" type="text" placeholder="Valor da Bolsa">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput [textMask]="{mask: mask6}" type="text" placeholder="Valor do Auxilio">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Área do Estágio">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Estagiário">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Orientador">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="example-full-width" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Supervisor">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <div class="button-row">
+        <button mat-raised-button color="primary" mat-button matStepperPrevious>Voltar</button>
+        <button mat-raised-button color="primary" mat-button matStepperNext>Avançar</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</body>
+
+</html>
